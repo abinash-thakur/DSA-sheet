@@ -52,3 +52,18 @@ class Solution {
         return newNode;
     }
 }
+
+//this is gives the best time complexcity then above
+//this is by using the recurssion
+class Solution {
+    public ListNode removeNodes(ListNode head) {
+        if(head == null || head.next == null) return head;
+
+        ListNode newNode = removeNodes(head.next);
+        if(newNode.val > head.val){
+            return newNode;
+        }
+        head.next = newNode;
+        return head;
+    }
+}
