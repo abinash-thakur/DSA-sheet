@@ -22,6 +22,7 @@ class Solution {
 
 //using constant space
 //constraint given as the nums are from 0 to 100 so it take 101 size of array to check the frequency and for negative element i take a variable to store the largest negative number.
+//space complexity O(100)
 
 class Solution {
     public int maxSum(int[] nums) {
