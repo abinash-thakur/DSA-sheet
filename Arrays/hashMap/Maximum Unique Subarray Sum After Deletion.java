@@ -19,3 +19,26 @@ class Solution {
         return maxSum;
     }
 }
+
+//using constant space
+//constraint given as the nums are from 0 to 100 so it take 101 size of array to check the frequency and for negative element i take a variable to store the largest negative number.
+
+class Solution {
+    public int maxSum(int[] nums) {
+        boolean track[] = new boolean[101];
+        int n = nums.length;
+        int neg = Integer.MIN_VALUE;
+        int sum = 0;
+
+        for(int i = 0; i < n; i++){
+            if(nums[i] > 0 && !track[nums[i]]){
+                sum += nums[i];
+                track[nums[i]] = true;
+            }
+            else{
+                neg = Math.max(neg, nums[i]);
+            }
+        }
+        return sum != 0 ? sum : neg;
+    }
+}
