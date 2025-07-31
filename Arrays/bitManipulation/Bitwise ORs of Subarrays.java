@@ -1,5 +1,5 @@
 //leetcode 898
-//time complexity O(n * d) (O(n) for traverse complete array and O(d) for traverse previous unique element in set)
+//time complexity O(n * 32) (O(n) for traverse complete array and O(32) for traverse previous unique element in set and that are not more than 32)
 
 class Solution {
     public int subarrayBitwiseORs(int[] arr) {
