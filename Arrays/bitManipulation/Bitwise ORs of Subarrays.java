@@ -1,5 +1,9 @@
-//leetcode 898
-//time complexity O(n * 32) (O(n) for traverse complete array and O(32) for traverse previous unique element in set and that are not more than 32)
+// Leetcode 898: Bitwise ORs of Subarrays
+// Time Complexity: O(n * 32) = O(n)
+// - For each element, we compute OR with at most 32 previous results (due to limited 32-bit values)
+// - OR operation only sets bits (never unsets), so new combinations are limited
+// - res tracks all unique ORs from all subarrays
+// Space Complexity: O(n * 32) in worst case due to result set size
 
 class Solution {
     public int subarrayBitwiseORs(int[] arr) {
