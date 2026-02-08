@@ -1,5 +1,6 @@
 /*
 leetcode - 239
+company - google
 time complexity O(n)
 space complexity O(1)
 */
